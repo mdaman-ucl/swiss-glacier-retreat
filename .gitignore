@@ -1,0 +1,31 @@
+# R session files
+.RData
+.RDataTmp*
+.Rhistory
+envir.RData
+
+.Rproj.user/
+
+# Quarto render outputs
+*.html
+*_files/
+
+# Raw and generated data
+data/raw/
+data/processed/
+
+# Shiny deployment folder and metadata
+shiny_deploy/
+rsconnect/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Temporary images
+images/
+clipboard-*.png
+
+# OS files
+.DS_Store
+Thumbs.db
