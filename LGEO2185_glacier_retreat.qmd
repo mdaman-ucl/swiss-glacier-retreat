@@ -1,5 +1,5 @@
 ---
-title: "Glacier retreat in the Alps"
+title: "Glacier retreat in the Swiss Alps"
 author: "Manu Daman"
 date: last-modified
 format:
@@ -36,7 +36,7 @@ In this context, repeated glacier inventories are essential for documenting glac
 
 ## Objectives
 
-The objective of this project is to develop a reproducible geospatial workflow in R to process Swiss glacier masks, quantify glacier surface loss over time, and visualise glacier retreat interactively. The analysis is based on a filtered Swiss Alpine subset of the GLIMS world glacier database, developped by the NASA. The final output is a Shiny app that allows users to select a single glacier, explore its extent over time, and compare its area evolution with a regional summer temperature anomaly indicator. Then, a secondary objective is to make the workflow extensible by allowing a "user-added glacier" mask to be integrated into the existing database. The project therefore combines spatial data processing, temporal analysis and interactive visualisation in order to make glacier retreat easier to analyse and communicate.
+The objective of this project is to develop a reproducible geospatial workflow in R to process Swiss glacier masks, quantify glacier surface loss over time, and visualise glacier retreat interactively. The analysis is based on a filtered Swiss Alpine subset of the GLIMS world glacier database, developed by the NASA. The final output is a Shiny app that allows users to select a single glacier, explore its extent over time, and compare its area evolution with a regional summer temperature anomaly indicator. Then, a secondary objective is to make the workflow extensible by allowing a "user-added glacier" mask to be integrated into the existing database. The project therefore combines spatial data processing, temporal analysis and interactive visualisation in order to make glacier retreat easier to analyse and communicate.
 
 ## Data and methodology
 
@@ -54,11 +54,11 @@ The conceptual workflow of the project is summarised in the figure below. It sho
 
 ![Conceptual workflow of the Swiss glacier retreat project.](outputs/figures/workmodel.jpg){width="100%"}
 
-## Shiny App and Github
+## Shiny app and Github
 
 The shiny app is available on : <https://mdaman.shinyapps.io/swiss-glacier-retreat/>
 
-All the codes are available on : INSERER LIEN GITHUB
+All the codes are available on : <https://github.com/mdaman-ucl/swiss-glacier-retreat>
 
 ## Workflow
 
@@ -354,7 +354,7 @@ glacier_catalog |>
 
 ### Preprocessing
 
-This step prepares the filtered glacier masks for quantitative analysis and interactive visualization. It is applied to all selected Swiss glaciers rather than to a few examples only. First, only glaciers with at least three distinct observation dates are retained, in order to ensure a meaningful temporal envolution. The workflow then keeps only the 2 features needed for the analysis: glacier boundaries and debris-covered areas. These geometries are merged by glacier, date and feature type before computing net ice-cover area.
+This step prepares the filtered glacier masks for quantitative analysis and interactive visualization. It is applied to all selected Swiss glaciers rather than to a few examples only. First, only glaciers with at least three distinct observation dates are retained, in order to ensure a meaningful temporal evolution. The workflow then keeps only the 2 features needed for the analysis: glacier boundaries and debris-covered areas. These geometries are merged by glacier, date and feature type before computing net ice-cover area.
 
 *Keep only glaciers with at least 3 distinct observation dates*
 
@@ -971,7 +971,7 @@ The Shiny application also showed that the different mapping methods used to cre
 
 A possible future improvement would be to develop an independent glacier detection workflow based directly on satellite imagery. This could rely on binary masks derived from spectral indices such as the Normalized Difference Snow Index (NDSI), or on band ratios using visible, near-infrared and shortwave-infrared bands. These approaches are commonly used because snow and clean ice are highly reflective in the visible part of the spectrum and much less reflective in the shortwave infrared. However, this would be a substantially more complex approach than the current project. It would require downloading and preprocessing large volumes of satellite imagery, selecting suitable cloud-free and snow-free summer scenes, dealing with shadows and debris-covered ice, and validating the resulting glacier masks. More advanced methods, including machine learning or deep learning, could also be considered, but they would require training data and a more demanding computational workflow.
 
-## Improved since 13 June {.unnumbered}
+## Improved since the last version {.unnumbered}
 
 -   Improved the Shiny application:
 
@@ -1033,11 +1033,11 @@ A possible future improvement would be to develop an independent glacier detecti
 
 Cremona, A., Huss, M., Landmann, J. M., Borner, J., & Farinotti, D. (2023). European heat waves 2022: Contribution to extreme glacier melt in Switzerland inferred from automated ablation readings. *The Cryosphere*, *17*(5), 1895–1912. <https://doi.org/10.5194/tc-17-1895-2023>
 
-GLAMOS. (2026). \*Swiss glaciers\*. Glacier Monitoring in Switzerland. Retrieved May 7, 2026, from https://www.glamos.ch/en/
+GLAMOS. (2026). \*Swiss glaciers\*. Glacier Monitoring in Switzerland. Retrieved May 7, 2026, from <https://www.glamos.ch/en/>
 
-Haeberli, W., Hoelzle, M., Paul, F., & Zemp, M. (2007). Integrated monitoring of mountain glaciers as key indicators of global climate change: The European Alps. \*Annals of Glaciology, 46\*, 150–160. https://doi.org/10.3189/172756407782871512
+Haeberli, W., Hoelzle, M., Paul, F., & Zemp, M. (2007). Integrated monitoring of mountain glaciers as key indicators of global climate change: The European Alps. \*Annals of Glaciology, 46\*, 150–160. <https://doi.org/10.3189/172756407782871512>
 
-IPCC. (2019). \*IPCC Special Report on the Ocean and Cryosphere in a Changing Climate: Chapter 2, High Mountain Areas\*. Intergovernmental Panel on Climate Change. https://www.ipcc.ch/srocc/chapter/chapter-2/
+IPCC. (2019). \*IPCC Special Report on the Ocean and Cryosphere in a Changing Climate: Chapter 2, High Mountain Areas\*. Intergovernmental Panel on Climate Change. <https://www.ipcc.ch/srocc/chapter/chapter-2/>
 
 Linsbauer, A., Huss, M., Hodel, E., Bauder, A., Fischer, M., Weidmann, Y., Bärtschi, H., & Schmassmann, E. (2021). The New Swiss Glacier Inventory SGI2016: From a Topographical to a Glaciological Dataset. *Frontiers in Earth Science*, *9*. <https://doi.org/10.3389/feart.2021.704189>
 
@@ -1045,6 +1045,6 @@ NASA Langley Research Center. (2025). *Prediction Of Worldwide Energy Resources 
 
 Raup, B., Racoviteanu, A., Khalsa, S. J. S., Helm, C., Armstrong, R., & Arnaud, Y. (2007). The GLIMS geospatial glacier database: A new tool for studying glacier change. *Global and Planetary Change*, *56*(1–2), 101–110. <https://doi.org/10.1016/j.gloplacha.2006.07.018>
 
-Sommer, C., Malz, P., Seehaus, T. C., Lippl, S., Zemp, M., & Braun, M. H. (2020). Rapid glacier retreat and downwasting throughout the European Alps in the early 21st century. \*Nature Communications, 11\*, Article 3209. https://doi.org/10.1038/s41467-020-16818-0
+Sommer, C., Malz, P., Seehaus, T. C., Lippl, S., Zemp, M., & Braun, M. H. (2020). Rapid glacier retreat and downwasting throughout the European Alps in the early 21st century. \*Nature Communications, 11\*, Article 3209. <https://doi.org/10.1038/s41467-020-16818-0>
 
-Swiss Federal Office of Topography swisstopo. (2024). \*How are our glaciers doing?\* Federal Geoportal geo.admin.ch. https://www.geo.admin.ch/en/dataset-of-the-week
+Swiss Federal Office of Topography swisstopo. (2024). \*How are our glaciers doing?\* Federal Geoportal geo.admin.ch. <https://www.geo.admin.ch/en/dataset-of-the-week>
