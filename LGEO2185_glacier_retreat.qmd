@@ -1027,7 +1027,7 @@ A possible future improvement would be to develop an independent glacier detecti
 
 -   Prepared a cleaner GitHub repository structure:
 
-    -   
+    -   <https://github.com/mdaman-ucl/swiss-glacier-retreat>
 
 ## Bibliography
 
